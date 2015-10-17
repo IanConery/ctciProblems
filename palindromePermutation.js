@@ -21,4 +21,3 @@ var palindromePermutations = function(str){
 };
 
 
-console.log(palindromePermutations("tacot cat"))
