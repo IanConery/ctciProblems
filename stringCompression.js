@@ -2,7 +2,7 @@
 //if the compressed string is not shorter than the original string return the original string
 //Example input: 'aabbbcddddeefgg' output: a2b3c1d4e2f1g2
 
-
+//Time: O(n) Space O(n)
 var stringCompressor = function(string){
   var strHash = {};
   var compressedString = '';
@@ -18,5 +18,3 @@ var stringCompressor = function(string){
     return compressedString;
   }
 };
-
-console.log(stringCompressor('abcdefg'))
