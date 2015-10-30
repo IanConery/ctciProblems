@@ -17,14 +17,28 @@ Stack.prototype.push = function(value){
 };
 
 Stack.prototype.pop = function(){
+  if(this.length === 0){
+    console.log('nothing in stack');
+  }
   var last = this[this.length];
   if(this.min[this.min.length - 1] === this[this.length]){
     this.min.pop();
   }
   delete this[this.length];
+  this.length--;
   return last;
 };
 
 Stack.prototype.min = function(){
   return this.min[this.min.length - 1];
 };
+
+
+var green = new Stack();
+green.push(9);
+green.push(91);
+green.push(3);
+green.push(2);
+console.log(green.pop());
+console.log(green.pop());
+console.log(green.pop());
